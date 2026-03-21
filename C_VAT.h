@@ -77,13 +77,13 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TArray<FStMaterialSlot> AllMaterial;
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	UStaticMesh* InVATMesh;
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FVector OffsetPosition = FVector(0, 0, -100);
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FVector Scale = FVector(1, 1, 1);
 
 

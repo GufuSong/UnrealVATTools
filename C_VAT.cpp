@@ -118,14 +118,17 @@ void AC_VAT::ReceiveParticleData_Implementation(const TArray<FBasicParticleData>
 	for (UMaterialInstanceDynamic* Mat : DynamicMaterials)
 	{
 		if (!Mat) continue;
+		
 		/*
 		GEngine->AddOnScreenDebugMessage(
 			-1,
 			5.0f,
 			FColor::Yellow,
-			FString::Printf(TEXT("Size: %f"), Data[0].Size)
+			FString::Printf(TEXT("Size: %s"), *Mat->GetName())
 		);
 		*/
+
+		
 		Mat->SetScalarParameterValue(TEXT("Time"), Data[0].Size);
 	}
 	
